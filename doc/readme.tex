@@ -7,7 +7,6 @@
 
 \begin{document}
 \author{Ignat Soroko}
-\email{ignat.soroko@gmail.com}
 \title{A brief description of the functionality of the accompanying code}
 \maketitle
 
@@ -131,7 +130,7 @@ Since the whole generator set {\tt [ 1 .. 8 ]} belongs to $\Lambda_2$, the hyper
 %\noindent
 Each $\Lambda_i$ is a list of lists of integers corresponding to the subsets of the generating set $S$, which is identified with {\tt [1..N]} for $\mathtt{N}=\Card(S)$, see the example above.
 
-\subsection*{Remark} To speed up computations, we form the slab subsets $\Psi(S)$ in a modified form. Instead of subsets $A\times K$ where $A\subset S$ is minimal nonspherical and $K\subset S$ is a spherical subset commuting with $A$, such that $A\times K$ have maximality property as per Definition~4.5 of the article, we store subsets of the form $A\times\{s\}$ where $A$ is as before, and $s$ commutes with $A$. This makes $\Lambda_0$ is different from the one defined in the article, however this has no bearing on the sets $\Lambda_1,\Lambda_2,\dots$ and they are exactly as they should be.
+\subsection*{Remark} To speed up computations, we form the slab subsets $\Psi(S)$ in a modified form. Instead of subsets $A\times K$ where $A\subset S$ is minimal nonspherical and $K\subset S$ is a spherical subset commuting with $A$, such that $A\times K$ have maximality property as per Definition~4.5 of the article, we store subsets of the form $A\times\{s\}$ where $A$ is as before, and $s$ commutes with $A$. This makes $\Lambda_0$ different from the one defined in the article, however this has no bearing on the sets $\Lambda_1,\Lambda_2,\dots$ and they are exactly as they should be.
 
 \bigskip\noindent
 {\tt $\blacktriangleright$ DuplexRACG(mat,m,n)}

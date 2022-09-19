@@ -963,15 +963,13 @@ NrEnds:=function(m)
 	if IsSpherical0(m,0) then return 0; fi;
 
 	lst:=DirectProductDecomposition(m);
-	if Size(lst)>1 then
-		L:=List(lst,x->CoxeterSubmatrix(m,x));
-		lst2:=Positions(L,IdentityMat(2)); # A1~ subsystems
-		if Size(lst2)=1 then
-			if ForAll(L{Difference([1..Size(L)],lst2)},x->IsSphericalComponent(x,0)) then
-				return 2; # i.e. all components except a single A1~ are spherical
-			fi;
+	L:=List(lst,x->CoxeterSubmatrix(m,x));
+	lst2:=Positions(L,IdentityMat(2)); # A1~ subsystems
+	if Size(lst2)=1 then
+		if ForAll(L{Difference([1..Size(L)],lst2)},x->IsSphericalComponent(x,0)) then
+			return 2; # i.e. all components except a single A1~ are spherical
 		fi;
-	fi;	
+	fi;
 
 	n:=Size(m);
 	iter:=IteratorOfCombinations([1..n]);	
